@@ -354,6 +354,17 @@ p {
   color: #555;
 }
 
+.error-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ffc107;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .main-content {

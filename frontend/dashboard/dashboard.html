@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +10,6 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pacifico&family=Open+Sans&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
 </head>
 
 <body>
@@ -20,7 +18,7 @@
     <div class="header-inner">
       <div class="branding">
         <div class="logo">
-          <img src="../../assets/shecan.jpeg" alt="She Can Foundation Logo" />
+          <img src="../assets/shecan.jpeg" alt="She Can Foundation Logo" />
         </div>
         <div class="logo-text">
           <span class="logo-she">She</span>
@@ -29,17 +27,16 @@
         </div>
       </div>
       <div class="user-dropdown">
-  <button id="userBtn">
-    <i class="fa-regular fa-user"></i><span id="username">User</span> <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="userDropdown">
-    <a href="../leaderboard/leaderboard.html">Leaderboard</a>
-    <a href="#" onclick="logout()">Logout</a>
-  </div>
-</div>
+        <button id="userBtn">
+          <i class="fa-regular fa-user"></i><span id="username">User</span> <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="userDropdown">
+          <a href="../leaderboard/leaderboard.html">Leaderboard</a>
+          <a href="#" onclick="logout()">Logout</a>
+        </div>
+      </div>
     </div>
   </header>
-
 
   <!-- Main Content Area -->
   <main class="main-content">
@@ -48,6 +45,8 @@
       <p>Here's your fundraising progress and achievements</p>
     </section>
 
+    <!-- ⚠️ Fallback warning will be added dynamically if fetch fails -->
+
     <!-- Stats -->
     <div class="stats-grid">
       <div class="stat-card">
@@ -55,7 +54,7 @@
           <span>Total Raised</span>
           <i class="fas fa-rupee-sign" style="color: #10b981"></i>
         </div>
-        <div class="stat-card-value" id="totalRaised" style="color: #10b981">
+        <div class="stat-card-value" id="totalRaised" data-fallback="5000" style="color: #10b981">
           ₹5,000
         </div>
         <div class="stat-card-footer" id="completePercent">50% of your target</div>
@@ -90,7 +89,7 @@
         <div class="stat-card-footer">₹5,000 remaining</div>
       </div>
     </div>
-    
+
     <div class="sections">
       <div class="card">
         <!-- Referral Code -->
@@ -105,6 +104,7 @@
             <i class="fa-regular fa-copy"></i> Copy
           </button>
         </div>
+
         <!-- Progress track -->
         <div class="progress-section">
           <div class="progress-labels">
@@ -130,9 +130,6 @@
         <div class="rewards" id="rewardsContainer"></div>
       </div>
     </div>
-
   </main>
-  </div>
 </body>
-
 </html>

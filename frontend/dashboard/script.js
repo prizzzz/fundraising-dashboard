@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(err => {
       console.error("Error in fetching data:", err);
+      const fallbackNotice = document.createElement("div");
+      fallbackNotice.className = "error-banner";
+      fallbackNotice.textContent = "⚠️ Live data unavailable. Showing default data.";
+      document.querySelector(".main-content").prepend(fallbackNotice);
     });
 });
 
@@ -78,5 +82,5 @@ window.addEventListener("click", function(e) {
 
 //Logout
 function logout() {
-  window.location.href = "../login_page/login_page.html";
+  window.location.href = "../../index.html";
 }
