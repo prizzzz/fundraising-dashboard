@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:3000/api/user")
+  fetch("https://fundraising-dashboard.onrender.com/api/user")
     .then(response => response.json())
     .then(data => {
       //username
