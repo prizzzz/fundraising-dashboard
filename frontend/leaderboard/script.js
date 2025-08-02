@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:3000/api/leaderboard")
+  fetch("https://fundraising-dashboard.onrender.com/api/leaderboard")
     .then((res) => res.json())
     .then((users) => {
       const tbody = document.getElementById("leaderboardBody");
