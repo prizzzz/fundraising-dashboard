@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff7ed;
+  padding: 15px;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  color: #1f2937;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 5px;
+}
+p.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 20px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th,td {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+thead {
+  background-color: #fe582e;
+  color: white;
+}
+tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+}
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+tbody tr:hover {
+  background-color: #fff7ed;
+}
+.rank {
+  font-weight: bold;
+}
+.rank-1 {
+  color: #f59e0b;
+}
+.rank-2 {
+  color: #9ca3af;
+}
+.rank-3 {
+  color: #dc2626;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1f2937;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+.referral-badge {
+  background-color: #ffedd4;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fe582e;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* button */
+.back-btn {
+  margin: 20px auto 0;
+  display: block;
+  width: fit-content;
+  background-color: #fe582e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+.back-btn:hover {
+  background-color: #e04a24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .referral-badge {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p.subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

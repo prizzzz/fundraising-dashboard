@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>She Can Foundation | Intern Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Pacifico&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="branding">
+        <div class="logo">
+          <img src="../../assets/shecan.jpeg" alt="She Can Foundation Logo" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-she">She</span>
+          <span class="logo-can">Can!</span>
+          <span class="logo-foundation">Foundation</span>
+        </div>
+      </div>
+      <div class="user-dropdown">
+  <button id="userBtn">
+    <i class="fa-regular fa-user"></i><span id="username">User</span> <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="userDropdown">
+    <a href="../leaderboard/leaderboard.html">Leaderboard</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</div>
+    </div>
+  </header>
+
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <section class="welcome-section">
+      <h1>Welcome back, Priyanka!</h1>
+      <p>Here's your fundraising progress and achievements</p>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>Total Raised</span>
+          <i class="fas fa-rupee-sign" style="color: #10b981"></i>
+        </div>
+        <div class="stat-card-value" id="totalRaised" style="color: #10b981">
+          ₹5,000
+        </div>
+        <div class="stat-card-footer" id="completePercent">50% of your target</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>Referrals</span>
+          <i class="fas fa-user-friends" style="color: #3b82f6"></i>
+        </div>
+        <div class="stat-card-value" id="referrals" style="color: #3b82f6">12</div>
+        <div class="stat-card-footer">People joined through your code</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>Current Rank</span>
+          <i class="fas fa-chart-line" style="color:#f59e0b"></i>
+        </div>
+        <div class="stat-card-value" id="rank" style="color:#f59e0b">#3</div>
+        <div class="stat-card-footer">Among all people</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <span>Target</span>
+          <i class="fas fa-bullseye" style="color: #f2522e"></i>
+        </div>
+        <div class="stat-card-value" id="target" style="color: #f2522e">
+          ₹10,000
+        </div>
+        <div class="stat-card-footer">₹5,000 remaining</div>
+      </div>
+    </div>
+    
+    <div class="sections">
+      <div class="card">
+        <!-- Referral Code -->
+        <h3>
+          <i class="fa-solid fa-gift" style="margin-right: 8px"></i>Your
+          Referral Code
+        </h3>
+        <p>Share this code with others to earn referral bonuses.</p>
+        <div class="referral-box">
+          <code id="referralCode">priyanka2025</code>
+          <button class="copy-btn" onclick="copyReferralCode()">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+        <!-- Progress track -->
+        <div class="progress-section">
+          <div class="progress-labels">
+            <span>Progress to Target</span>
+            <span id="progressPercent">50%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 50%"></div>
+          </div>
+          <div class="progress-values">
+            <span>₹0</span>
+            <span>₹10,000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rewards -->
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-trophy" style="margin-right: 8px"></i>Rewards & Achievements
+        </h3>
+        <p>Unlock rewards as you reach milestones.</p>
+        <div class="rewards" id="rewardsContainer"></div>
+      </div>
+    </div>
+
+  </main>
+  </div>
+</body>
+
+</html>

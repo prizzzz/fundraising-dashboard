@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fff8f6 0%, #fdf2f0 50%, #f8f6f3 100%);
+  color: #010d26;
+  min-height: 100vh;
+}
+p {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Header*/
+.header {
+  background: #101d3c;
+  padding: 16px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  background: linear-gradient(to right, #f2522e, #d13220);
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.logo-text {
+  line-height: 1.1;
+}
+
+.logo-she {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+}
+
+.logo-can {
+  font-family: "Pacifico", cursive;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+  margin-left: 4px;
+}
+
+.logo-foundation {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #fecba2;
+  letter-spacing: 0.5px;
+}
+
+/* User dropdown menu */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#userBtn {
+  background-color: #f1f5f9;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  margin-top: 6px;
+  z-index: 1;
+  min-width: 160px;
+  overflow: hidden;
+  
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color:#e0f2fe;
+
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Main Content */
+.main-content {
+  padding: 2rem 3rem;
+}
+
+.welcome-section {
+  margin-bottom: 2rem;
+}
+
+.welcome-section h1 {
+  font-size: 1.8rem;
+  color: #010d26;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Stats  */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 0.9rem;
+}
+.stat-card-header > span {
+  color: #010d26;
+  font-weight: 400;
+}
+.stat-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card-footer {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Cards */
+.sections {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  padding: 3%;
+  width: 48.5%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  background-color: #fff;
+}
+.card > h3 {
+  font-weight: 600;
+}
+
+/* Referral */
+.referral-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.referral-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.referral-code-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px dashed #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+#referralCode {
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #155dfc;
+}
+.referral-box {
+  background: #f3f4f6;
+  border: 2px dashed #cbd5e1;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* progress */
+.progress-section {
+  margin-top: 1.5rem;
+}
+
+.progress-labels,
+.progress-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #10b981;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease;
+}
+
+/* Rewards */
+.reward {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin: 0.8rem;
+  background-color: #f0fdf4;
+  position: relative;
+}
+.reward-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #dbfce7;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.reward-text strong {
+  font-weight: 500; 
+  color: #111827; 
+  display: block;
+  margin-bottom: 2px;
+}
+.reward.unlocked {
+  background-color: #ecfdf5;
+  border-color: #bbf7d0;
+}
+
+.reward .reward-text {
+  flex: 1;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: auto; /* Pushes to right */
+}
+
+.badge.unlocked {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.reward.locked {
+  opacity: 0.6;
+  filter: grayscale(80%);
+}
+
+.reward.locked .reward-icon {
+  color: gray;
+}
+
+.reward.locked .reward-text strong,
+.reward.locked .reward-text p {
+  color: #888;
+}
+
+.badge.locked {
+  background-color: #ccc;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
