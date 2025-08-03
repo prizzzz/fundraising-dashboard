@@ -82,5 +82,5 @@ window.addEventListener("click", function(e) {
 
 //Logout
 function logout() {
-  window.location.href = "index.html";
+  window.location.href = "./index.html";
 }
